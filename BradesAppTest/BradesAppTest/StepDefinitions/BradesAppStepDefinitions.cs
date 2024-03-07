@@ -3,6 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
 using TechTalk.SpecFlow.Assist;
+using TechTalk.SpecFlow.Infrastructure;
 
 namespace BradesAppTest.StepDefinitions
 {
@@ -12,18 +13,22 @@ namespace BradesAppTest.StepDefinitions
         // For additional details on SpecFlow step definitions see https://go.specflow.org/doc-stepdef
 
         private AppiumDriver<AndroidElement> _driver;
+        //private readonly ISpecFlowOutputHelper specFlowOutputHelper; use 4 later
+        //adb uninstall io.appium.uiautomator2.server.test adb uninstall io.appium.uiautomator2.server
         readonly TestingDriver driver;
 
         public BradesAppStepDefinitions()
         {
             driver = (TestingDriver)ScenarioContext.Current["driver"];
+            _driver = driver.Init();
+
         }
 
         [Given(@"Ejecuto la aplicacion")]
         public void GivenEjecutoLaAplicacion()
         {
 
-            _driver = driver.Init();
+            //_driver = driver.Init();
             Gestos.SwipeTopRight(_driver);
             try
             {
@@ -41,8 +46,9 @@ namespace BradesAppTest.StepDefinitions
         [Given(@"Abro el menu oculto")]
         public void GivenAbroElMenuOculto()
         {
-            _driver = driver.Init();
+            //_driver = driver.Init();
             _driver.FindElementByAccessibilityId("Menú").Click();
+            
         }
 
         [Given(@"Doy Click en Leyendas Legales")]
@@ -87,7 +93,7 @@ namespace BradesAppTest.StepDefinitions
         [Given(@"Doy Click en Ayuda")]
         public void GivenDoyClickEnAyuda()
         {
-            _driver = driver.Init();
+            //_driver = driver.Init();
 
             _driver.FindElementByXPath("//android.widget.TextView[@resource-id=\"mx.com.appbradescard:id/txtHelp\"]").Click();
         }

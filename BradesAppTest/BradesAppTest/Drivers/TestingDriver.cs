@@ -19,9 +19,9 @@ namespace BradesAppTest.Drivers
         public AppiumDriver<AndroidElement> Init()
         {
             var driverOptions = new AppiumOptions();
-            driverOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
-            driverOptions.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "13");
-            driverOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "3115TF1010021259");
+            //driverOptions.AddAdditionalCapability(MobileCapabilityType.PlatformName, "Android");
+            //driverOptions.AddAdditionalCapability(MobileCapabilityType.PlatformVersion, "13");
+            //driverOptions.AddAdditionalCapability(MobileCapabilityType.DeviceName, "3115TF1010021259");
             //driverOptions.AddAdditionalCapability("appium:appPackage", "mx.com.appbradescard");//this ones not working somehow
             //driverOptions.AddAdditionalCapability("appium:launchActivity", "com.app.bradescard.ui.modules.login.LoginActivity");
             //                                     THIS IS THE FIRST OBSTACLE THAT I HAD appium:XXX :: OpenQA.Selenium.WebDriverException : 'automationName' can't be blank 
