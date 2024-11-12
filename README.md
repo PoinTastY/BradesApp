@@ -1,1 +1,1 @@
-this is the code to show the skill to automate a test process, by autimatically logging into the bradescard application, using appium (from Selenium) fraework
+this is the code to show the skill to automate a test process, by autimatically logging into the bradescard application, using NUNIt and SpecFlow for the use cases and features, and appium as the driver
